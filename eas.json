@@ -1,0 +1,30 @@
+{
+  "cli": {
+    "version": ">= 18.0.3",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "prebuildCommand": "npx expo prebuild --clean --platform android"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "prebuildCommand": "npx expo prebuild --clean --platform android"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "prebuildCommand": "npx expo prebuild --clean --platform android"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
